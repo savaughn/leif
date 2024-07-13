@@ -1,6 +1,7 @@
-CC=clang
-INCS=-I/usr/local/include -I/opt/homebrew/Cellar/glfw/3.4/include -I/opt/homebrew/Cellar/cglm/0.9.4/include -Ivendor/glad/include -Ivendor/stb_image/ -Ivendor/stb_truetype -Ivendor/stb_image_resize
-LIBS=-L/usr/local/lib -lglfw -lcglm
+cc=gcc
+INCS=-I/usr/local/include -I/opt/homebrew/Cellar/glfw/3.4/include -I/opt/homebrew/Cellar/cglm/0.9.4/include -I/opt/homebrew/Cellar/glew/2.2.0_1/include -Ivendor/glad/include -Ivendor/stb_image/ -Ivendor/stb_truetype -Ivendor/stb_image_resize
+LIBS=-L/usr/local/lib -L/opt/homebrew/Cellar/glfw/3.4/lib -L/opt/homebrew/Cellar/cglm/0.9.4/lib -L/opt/homebrew/Cellar/glew/2.2.0_1/lib -lglfw -lcglm -lglew -lleif -lclipboard -lm -DGL_SILENCE_DEPRECATION -framework Cocoa -framework OpenGL
+
 CFLAGS+=${INCS} ${LIBS} -DLF_GLFW -O3 -ffast-math 
 all: lib/leif.a
 

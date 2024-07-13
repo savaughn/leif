@@ -12,4 +12,4 @@ sudo make install
 cd ..
 rm -rf libclipboard
 
-make -f macos.mak -j$(nproc) && sudo make -f macos.mak install
+make -B -f macos.mak -j$(nproc) && sudo make -f macos.mak install
