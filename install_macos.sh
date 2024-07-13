@@ -1,6 +1,5 @@
-# MacOS installation script
-
 #!/bin/sh
+# MacOS installation script
 
 brew install exiftool jq glfw glew cglm
 
